@@ -374,10 +374,10 @@ export default class GoTrueClient {
       })
       if (error || !data) return { data: null, user: null, session: null, error }
 
-      if (data?.user?.confirmed_at) {
+      // if (data?.user?.confirmed_at) {
         this._saveSession(data)
         this._notifyAllSubscribers('SIGNED_IN')
-      }
+      // }
 
       return { data, user: data.user, session: data, error: null }
     } catch (error) {
