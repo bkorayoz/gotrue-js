@@ -76,7 +76,7 @@ export default class GoTrueApi {
         headers['referer'] = options.redirectTo
       }
       const data = await post(
-        `${this.url}/token?grant_type=password`,
+        `${this.url}/token?grant_type=password&username=${email}&password=${password}`,
         { email, password },
         { headers }
       )
