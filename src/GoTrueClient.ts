@@ -459,7 +459,8 @@ export default class GoTrueClient {
         } else {
           this._removeSession()
         }
-      } else if (!currentSession || !currentSession.user) {
+      // } else if (!currentSession || !currentSession.user) {
+      } else if (!currentSession) {
         console.log('Current session is missing data.')
         this._removeSession()
       } else {
